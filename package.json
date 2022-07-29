@@ -1,0 +1,23 @@
+{
+  "name": "cosmostv",
+  "version": "1.0.0",
+  "description": "The most intelligent open source television operating system designed for Raspberry PI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosmosbots/CosmosTV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosmosbots/CosmosTV/issues"
+  },
+  "homepage": "https://github.com/cosmosbots/CosmosTV#readme",
+  "dependencies": {
+    "electron": "^19.0.10"
+  }
+}

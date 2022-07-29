@@ -1,0 +1,27 @@
+body {
+    color: white;
+    font-family: 'arial', 'helvetica';
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+.backgroundimg {
+    height: 100vh;
+    width: 100vw;
+    opacity: .6;
+}
+
+.applicationselector {
+    position: fixed;
+    bottom: 38px;
+    width: calc(100% - 76px);
+    margin-left: 38px;
+    border-radius: 25px;
+    height: 300px;
+    background: white;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+}
