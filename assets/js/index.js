@@ -22,7 +22,17 @@ function timeUpdateLoop() {
     setTimeout(timeUpdateLoop, 1e3);
 }
 
+async function openDisneyPlus() {
+    var cwd = await window.electron.cwd()
+    var loadId = await window.electron.executeCommand('ol-disneyplus', 'https://www.disneyplus.com/home')
+}
+
 function init() {
+    window.electron.pingBackend()
+    .then(d => {
+        console.log("Backend ping response: " + d)
+    });
+
     if (document.body === null) {
         setTimeout(init, 100);
     }

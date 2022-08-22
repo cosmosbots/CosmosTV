@@ -4,7 +4,9 @@
   "description": "The most intelligent open source television operating system designed for Raspberry PI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx electron .",
+    "build:win": "electron-builder build && py -m castlabs_evs.vmp sign-pkg dist/win-unpacked/",
+    "build:mac": "electron-builder build && py -m castlabs_evs.vmp sign-pkg dist/mac/"
   },
   "repository": {
     "type": "git",
@@ -16,8 +18,16 @@
   "bugs": {
     "url": "https://github.com/cosmosbots/CosmosTV/issues"
   },
+  "build": {
+    "electronDownload": {
+      "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
+    }
+  },
   "homepage": "https://github.com/cosmosbots/CosmosTV#readme",
+  "devDependencies": {
+    "electron": "github:castlabs/electron-releases#v20.0.3+wvcus"
+  },
   "dependencies": {
-    "electron": "^19.0.10"
+    "remove": "^0.1.5"
   }
 }
