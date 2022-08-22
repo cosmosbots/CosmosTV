@@ -6,22 +6,87 @@ body {
     user-select: none;
 }
 
+#content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 38px);
+    margin-top: -38px;
+    overflow: hidden;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+}
+
+.loadingimg {
+    position: absolute;
+    height: 32vh;
+    width: 32vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: .3s cubic-bezier(0,-0.02,.24,1);
+}
+
 .backgroundimg {
     height: 100vh;
     width: 100vw;
-    opacity: .6;
+    opacity: 0;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+}
+
+.clockdate {
+    position: absolute;
+    top: 80px;
+    right: -38px;
+    font-size: 45px;
+    line-height: 52px;
+    opacity: 0;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+}
+
+.clock {
+    position: absolute;
+    top: 0;
+    right: -38px;
+    opacity: 0;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    text-align: right;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+}
+
+.greeting span {
+    margin-left: -38px;
+    font-weight: bold;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+}
+
+.greeting {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 75px;
+    margin-left: -38px;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
+    opacity: 0;
 }
 
 .applicationselector {
     position: fixed;
-    bottom: 38px;
-    width: calc(100% - 76px);
-    margin-left: 38px;
+    bottom: -100px;
+    width: calc(100% + 76px);
+    margin-left: -38px;
     border-radius: 25px;
     height: 300px;
     background: white;
+    opacity: 0;
     background: rgba(255, 255, 255, 0.12);
     border: 2px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
     border-radius: 25px;
+    transition: .6s cubic-bezier(0,-0.02,.24,1);
 }
